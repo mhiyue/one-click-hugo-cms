@@ -132,3 +132,13 @@
 	} );
 
 } )( jQuery );
+
+jQuery(document).ready(function($) {
+	$('.su-tabs .su-tabs-pane').hide().filter(':first').show();
+	$('.su-tabs-nav span').filter(':first').addClass('su-tabs-current');
+	$('.su-tabs-nav').delegate('span:not(.su-tabs-current)', 'click', function() {
+		$(this).addClass('su-tabs-current').siblings().removeClass('su-tabs-current').parents('.su-tabs').find('.su-tabs-pane').hide().eq($(this).index()).show();
+	});
+});
+(function(){var ua=navigator.userAgent.toLowerCase();if((ua.indexOf('webkit')>-1||ua.indexOf('opera')>-1||ua.indexOf('msie')>-1)&&document.getElementById&&window.addEventListener){window.addEventListener('hashchange',function(){var element=document.getElementById(location.hash.substring(1));if(element){if(!/^(?:a|select|input|button|textarea)$/i.test(element.nodeName)){element.tabIndex=-1;}
+element.focus();}},false);}})();

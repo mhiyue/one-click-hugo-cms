@@ -2,17 +2,23 @@
 # This file is distributed under the same license as the WordPress - 4.9.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-07-28 01:29:47+0000\n"
+"PO-Revision-Date: 2019-11-14 00:33:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: GlotPress/3.0.0-alpha\n"
 "Language: zh_CN\n"
 "Project-Id-Version: WordPress - 4.9.x - Administration\n"
 
+#. translators: 1: error message, 2: line number
+#: wp-admin/link-parse-opml.php:88
+msgid "XML Error: %1$s at line %2$s"
+msgstr "XML错误：%1$s于行%2$s"
+
 #. translators: %s: WordPress version
-#: wp-admin/about.php:50
+#: wp-admin/about.php:50 wp-admin/about.php:70 wp-admin/about.php:90
+#: wp-admin/about.php:110 wp-admin/about.php:130
 msgid "https://wordpress.org/support/wordpress-version/version-%s/"
 msgstr "https://wordpress.org/support/wordpress-version/version-%s/"
 
@@ -9460,40 +9466,41 @@ msgstr "%s版本"
 msgid "What&#8217;s New"
 msgstr "更新内容"
 
-#: wp-admin/about.php:412
+#: wp-admin/about.php:492
 msgid "Return to Updates"
 msgstr "返回“更新”"
 
-#: wp-admin/about.php:412
+#: wp-admin/about.php:492
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "返回“仪表盘” &rarr; “更新”"
 
-#: wp-admin/about.php:415
+#: wp-admin/about.php:495
 msgid "Go to Dashboard &rarr; Home"
 msgstr "前往“仪表盘” &rarr; “首页”"
 
-#: wp-admin/about.php:415
+#: wp-admin/about.php:495
 msgid "Go to Dashboard"
 msgstr "前往“仪表盘”"
 
-#: wp-admin/about.php:519
+#: wp-admin/about.php:599
 msgid "Maintenance Release"
 msgstr "维护更新"
 
-#: wp-admin/about.php:522
+#: wp-admin/about.php:602
 msgid "Security Release"
 msgstr "安全更新"
 
-#: wp-admin/about.php:525
+#: wp-admin/about.php:605
 msgid "Maintenance and Security Release"
 msgstr "维护和安全更新"
 
 #. translators: %s: HelpHub URL
 #. translators: %s: Codex URL
-#: wp-admin/about.php:47 wp-admin/about.php:63 wp-admin/about.php:81
-#: wp-admin/about.php:99 wp-admin/about.php:117 wp-admin/about.php:135
-#: wp-admin/about.php:153 wp-admin/about.php:171 wp-admin/about.php:189
-#: wp-admin/about.php:207 wp-admin/about.php:546
+#: wp-admin/about.php:47 wp-admin/about.php:67 wp-admin/about.php:87
+#: wp-admin/about.php:107 wp-admin/about.php:127 wp-admin/about.php:143
+#: wp-admin/about.php:161 wp-admin/about.php:179 wp-admin/about.php:197
+#: wp-admin/about.php:215 wp-admin/about.php:233 wp-admin/about.php:251
+#: wp-admin/about.php:269 wp-admin/about.php:287 wp-admin/about.php:626
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "欲了解更多，参见<a href=\"%s\">发行注记</a>。"
 
@@ -10673,20 +10680,20 @@ msgstr "实时预览“%s”"
 msgid "View page"
 msgstr "查看页面"
 
-#: wp-admin/about.php:520
+#: wp-admin/about.php:600
 msgid "Maintenance Releases"
 msgstr "维护更新"
 
-#: wp-admin/about.php:523
+#: wp-admin/about.php:603
 msgid "Security Releases"
 msgstr "安全更新"
 
-#: wp-admin/about.php:35 wp-admin/about.php:526
+#: wp-admin/about.php:35 wp-admin/about.php:606
 msgid "Maintenance and Security Releases"
 msgstr "维护和安全更新"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:529
+#: wp-admin/about.php:609
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>版本%s</strong>修正了一个安全问题。"
 
@@ -11337,8 +11344,8 @@ msgid "Invalid API response code (%d)"
 msgstr "API响应代码无效（%d）"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:70 wp-admin/about.php:106 wp-admin/about.php:142
-#: wp-admin/about.php:160 wp-admin/about.php:534
+#: wp-admin/about.php:150 wp-admin/about.php:186 wp-admin/about.php:222
+#: wp-admin/about.php:240 wp-admin/about.php:614
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>%1$s版本</strong>修复了%2$s个问题。"
@@ -11346,15 +11353,15 @@ msgstr[0] "<strong>%1$s版本</strong>修复了%2$s个问题。"
 #. translators: 1: WordPress version number, 2: plural number of bugs.
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:88 wp-admin/about.php:124 wp-admin/about.php:178
-#: wp-admin/about.php:196 wp-admin/about.php:542
+#: wp-admin/about.php:168 wp-admin/about.php:204 wp-admin/about.php:258
+#: wp-admin/about.php:276 wp-admin/about.php:622
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s版本</strong>修补了安全漏洞、修正了%2$s个问题。"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:538
+#: wp-admin/about.php:618
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>%1$s版本</strong>修补了安全漏洞、修正了%2$s个问题。"
@@ -11384,167 +11391,167 @@ msgid "Thank you for updating to the latest version! WordPress %s will smooth yo
 msgstr "感谢您升级到最新版！WordPress %s能让您的设计工作流更顺滑，防止您的代码出现错误。"
 
 #. translators: %s: party popper emoji
-#: wp-admin/about.php:218
+#: wp-admin/about.php:298
 msgid "Major Customizer Improvements, Code Error Checking, and More! %s"
 msgstr "大规模的定制器改善、代码错误检查和更多！%s"
 
-#: wp-admin/about.php:223
+#: wp-admin/about.php:303
 msgid "Welcome to an improved Customizer workflow with design drafts, locking, scheduling, and preview links. What&#8217;s more, code syntax highlighting and error checking will make for a clean and smooth site building experience. Finally, if all that wasn&#8217;t pretty great, we&#8217;ve got a great new Gallery widget and improvements to theme browsing and switching."
 msgstr "欢迎来到改良的定制器工作流，包括了设计草稿、锁、计划和预览链接等新功能。此外，代码语法高亮和错误检查能让您的站点建设体验更整洁平滑。我们还为您带来了全新画廊小工具并改善了主题浏览和切换的体验。"
 
-#: wp-admin/about.php:236
+#: wp-admin/about.php:316
 msgid "Customizer Workflow Improved"
 msgstr "改良的定制器工作流"
 
-#: wp-admin/about.php:244
+#: wp-admin/about.php:324
 msgid "Draft and Schedule Site Design Customizations"
 msgstr "起草并计划发布站点设计修改"
 
-#: wp-admin/about.php:245
+#: wp-admin/about.php:325
 msgid "Yes, you read that right. Just like you can draft and revise posts and schedule them to go live on the date and time you choose, you can now tinker with your site&#8217;s design and schedule those design changes to go live as you please."
 msgstr "就像您可以在撰写文章时打草稿并在您希望的日期和时间发布一样，您也可以对站点设计做同样的事。现在可以随您所好地调整并计划设计更新。"
 
-#: wp-admin/about.php:251
+#: wp-admin/about.php:331
 msgid "Collaborate with Design Preview Links"
 msgstr "通过设计共享链接协作"
 
-#: wp-admin/about.php:252
+#: wp-admin/about.php:332
 msgid "Need to get some feedback on proposed site design changes? WordPress 4.9 gives you a preview link you can send to your team and customers so that you can collect and integrate feedback before you schedule the changes to go live. Can we say collaboration&#43;&#43;?"
 msgstr "想要为您提议的站点设计修改取得反馈？WordPress 4.9向您提供了能发送给您的团队或客户的预览链接，让您能够取得并整合来自他人的反馈，并在计划的日期公开您的修改。我们能说协作++吗？"
 
-#: wp-admin/about.php:258
+#: wp-admin/about.php:338
 msgid "Design Locking To Guard Your Changes"
 msgstr "设计锁来保护您的修改"
 
-#: wp-admin/about.php:259
+#: wp-admin/about.php:339
 msgid "Ever encounter a scenario where two designers walk into a project and designer A overrides designer B&#8217;s beautiful changes? WordPress 4.9&#8217;s design lock feature (similar to post locking) secures your draft design so that no one can make changes to it or erase all your hard work."
 msgstr "遇到过两名设计师同时修改一个项目，设计师A覆盖了设计师B的优美修改的事情吗？WordPress 4.9的设计锁功能与文章锁相似，在您进行设计修改时保护您，防止他人修改或抹除您的工作成果。"
 
-#: wp-admin/about.php:265
+#: wp-admin/about.php:345
 msgid "A Prompt to Protect Your Work"
 msgstr "保护您的工作的提示"
 
-#: wp-admin/about.php:266
+#: wp-admin/about.php:346
 msgid "Were you lured away from your desk before you saved your new draft design? Fear not, when you return, WordPress 4.9 will politely ask whether or not you&#8217;d like to save your unsaved changes."
 msgstr "您在保存您的全新设计草稿前就离开了？别怕，当您回来时，WordPress 4.9会礼貌地问您是否想要保存这些未保存的修改。"
 
-#: wp-admin/about.php:273
+#: wp-admin/about.php:353
 msgid "Coding Enhancements"
 msgstr "代码增强"
 
-#: wp-admin/about.php:281
+#: wp-admin/about.php:361
 msgid "Syntax Highlighting and Error Checking? Yes, Please!"
 msgstr "语法高亮和错误检查？正如所愿！"
 
-#: wp-admin/about.php:282
+#: wp-admin/about.php:362
 msgid "You&#8217;ve got a display problem but can&#8217;t quite figure out exactly what went wrong in the CSS you lovingly wrote. With syntax highlighting and error checking for CSS editing and the Custom HTML widget introduced in WordPress 4.8.1, you&#8217;ll pinpoint coding errors quickly. Practically guaranteed to help you scan code more easily and suss out and fix code errors quickly."
 msgstr "您遇到了一个显示问题，但不能确定您所写的CSS到底出了什么问题。在CSS编辑和WordPress 4.8.1中引入的自定义HTML小工具有了语法高亮和错误检查后，您将能够快速找出代码错误。我们保证这项功能可以帮助您更轻松地扫描代码，并快速修复代码错误。"
 
-#: wp-admin/about.php:288
+#: wp-admin/about.php:368
 msgid "Sandbox for Safety"
 msgstr "沙盒为了安全"
 
-#: wp-admin/about.php:289
+#: wp-admin/about.php:369
 msgid "The dreaded white screen. You&#8217;ll avoid it when working on themes and plugin code because WordPress 4.9 will warn you about saving an error. You&#8217;ll sleep better at night."
 msgstr "可怕的白色屏幕。现在WordPress 4.9在您要保存的主题或插件代码有错误时会提出警告，让您能够避免损坏整个站点，也让您晚上睡得更安心。"
 
-#: wp-admin/about.php:295
+#: wp-admin/about.php:375
 msgid "Warning: Potential Danger Ahead!"
 msgstr "警告：前方危险！"
 
-#: wp-admin/about.php:296
+#: wp-admin/about.php:376
 msgid "When you edit themes and plugins directly, WordPress 4.9 will politely warn you that this is a dangerous practice. It will recommend that you backup your files before saving, so they don&#8217;t get overwritten by the next update. Take the safe route: your future self will thank you. Your team and customers will thank you."
 msgstr "当您直接编辑主题和插件时，WordPress 4.9会礼貌地警告您这是一种很危险的做法，同时会建议您在保存前备份您的文件，这样您的修改就不会在下次更新时遭到覆盖。请走安全路线：未来的您会感谢您，您的团队和客户也会感谢您。"
 
-#: wp-admin/about.php:303
+#: wp-admin/about.php:383
 msgid "Even More Widget Updates"
 msgstr "更多的小工具更新"
 
-#: wp-admin/about.php:311
+#: wp-admin/about.php:391
 msgid "The New Gallery Widget"
 msgstr "全新画廊小工具"
 
-#: wp-admin/about.php:312
+#: wp-admin/about.php:392
 msgid "An incremental improvement to the media changes hatched in WordPress 4.8, you can now add a gallery via widget. Yes!"
 msgstr "从WordPress 4.8的媒体变更延伸而来的渐进式改进，现在您可以通过小工具添加一个画廊了！"
 
-#: wp-admin/about.php:318
+#: wp-admin/about.php:398
 msgid "Press a Button, Add Media"
 msgstr "按下按钮，加入媒体"
 
-#: wp-admin/about.php:319
+#: wp-admin/about.php:399
 msgid "Want to add media to your text widget? Embed images, video, and audio directly into the widget along with your text, with our simple but useful Add Media button. Woo!"
 msgstr "想要向您的文字小工具加入媒体？通过我们简单而有用的”添加媒体“按钮，在小工具中向您的文字旁边嵌入图像、视频和音频。喔！"
 
-#: wp-admin/about.php:326
+#: wp-admin/about.php:406
 msgid "Site Building Improvements"
 msgstr "站点建设改进"
 
-#: wp-admin/about.php:334
+#: wp-admin/about.php:414
 msgid "More Reliable Theme Switching"
 msgstr "更可靠的主题切换"
 
-#: wp-admin/about.php:335
+#: wp-admin/about.php:415
 msgid "When you switch themes, widgets sometimes think they can just up and move location. Improvements in WordPress 4.9 offer more persistent menu and widget placement when you decide it&#8217;s time for a new theme. Additionally, you can preview installed themes or download, install, and preview new themes right. Nothing says handy like being able to preview before you deploy. "
 msgstr "在您切换主题时，有的时候小工具会自行移动位置。WordPress 4.9的改进在您更换主题时向您带来更可靠的菜单和挂件位置。此外，您可以预览已安装的主题，或正确地下载、安装并预览新主题。在部署之前，没有什么能够像预览一样方便的。"
 
-#: wp-admin/about.php:341
+#: wp-admin/about.php:421
 msgid "Better Menu Instructions = Less Confusion"
 msgstr "更好的菜单说明 = 更少的迷惑"
 
-#: wp-admin/about.php:342
+#: wp-admin/about.php:422
 msgid "Were you confused by the steps to create a new menu? Perhaps no longer! We&#8217;ve ironed out the UX for a smoother menu creation process. Newly updated copy will guide you."
 msgstr "您被创建新菜单的步骤搞糊涂了吗？现在不会了！我们向您带来了更顺滑的菜单创建用户体验。新的说明文字会指导您。"
 
 #. translators: %s: handshake emoji
-#: wp-admin/about.php:359
+#: wp-admin/about.php:439
 msgid "Lend a Hand with Gutenberg %s"
 msgstr "帮一帮Gutenberg %s"
 
-#: wp-admin/about.php:365
+#: wp-admin/about.php:445
 msgid "WordPress is working on a new way to create and control your content and we&#8217;d love to have your help. Interested in being an <a href=\"%s\">early tester</a> or getting involved with the Gutenberg project? <a href=\"%s\">Contribute on GitHub</a>."
 msgstr "WordPress正致力于一种新的创建并控制您的内容的方式，我们需要您的帮助。想要成为<a href=\"%s\">早期测试者</a>或投身于Gutenberg项目？<a href=\"%s\">在GitHub贡献</a>。"
 
-#: wp-admin/about.php:366
+#: wp-admin/about.php:446
 msgid "https://wordpress.org/plugins/gutenberg/"
 msgstr "https://wordpress.org/plugins/gutenberg/"
 
 #. translators: %s: smiling face with smiling eyes emoji
-#: wp-admin/about.php:376
+#: wp-admin/about.php:456
 msgid "Developer Happiness %s"
 msgstr "开发者的小确幸%s"
 
-#: wp-admin/about.php:383
+#: wp-admin/about.php:463
 msgid "Customizer JS API Improvements"
 msgstr "定制器JS API改进"
 
 #. translators: %s:
 #. https://make.wordpress.org/core/2017/11/01/improvements-to-the-customize-js-api-in-4-9
-#: wp-admin/about.php:387
+#: wp-admin/about.php:467
 msgid "We&#8217;ve made numerous improvements to the Customizer JS API in WordPress 4.9, eliminating many pain points and making it just as easy to work with as the PHP API. There are also new base control templates, a date/time control, and section/panel/global notifications to name a few. <a href=\"%s\">Check out the full list.</a>"
 msgstr "我们在WordPress 4.9中对定制器JS API进行了数项改进，消除了许多痛点，让它和PHP API一样易用。现在也有了新的基本控制模板、日期/时间控件和小节/页面/全局通知。<a href=\"%s\">查看完整列表。</a>"
 
-#: wp-admin/about.php:393
+#: wp-admin/about.php:473
 msgid "CodeMirror available for use in your themes and plugins"
 msgstr "CodeMirror现已在您的主题和插件中可用"
 
-#: wp-admin/about.php:394
+#: wp-admin/about.php:474
 msgid "We&#8217;ve introduced a new code editing library, CodeMirror, for use within core. Use it to improve any code writing or editing experiences within your plugins, like CSS or JavaScript include fields."
 msgstr "我们向您介绍在核心中使用的全新的代码编辑库，CodeMirror。请用它来改进您插件中编辑代码的体验，如CSS或JavaScript编辑框。"
 
-#: wp-admin/about.php:397
+#: wp-admin/about.php:477
 msgid "MediaElement.js upgraded to 4.2.6"
 msgstr "MediaElement.js升级到4.2.6"
 
-#: wp-admin/about.php:398
+#: wp-admin/about.php:478
 msgid "WordPress 4.9 includes an upgraded version of MediaElement.js, which removes dependencies on jQuery, improves accessibility, modernizes the UI, and fixes many bugs."
 msgstr "WordPress包含了升级版的MediaElement.js，其中移除了对jQuery的依赖、增强了无障碍访问、有了现代化的界面并修正了许多问题。"
 
-#: wp-admin/about.php:401
+#: wp-admin/about.php:481
 msgid "Improvements to Roles and Capabilities"
 msgstr "角色和能力的改进"
 
-#: wp-admin/about.php:402
+#: wp-admin/about.php:482
 msgid "New capabilities have been introduced that allow granular management of plugins and translation files. In addition, the site switching process in multisite has been fine-tuned to update the available roles and capabilities in a more reliable and coherent way."
 msgstr "新的能力让您能够更细致地管理插件和翻译文件。此外，多站点中的站点切换过程已被调整，让对可用的角色和能力的更新过程更可靠和连贯。"
 
@@ -11801,6 +11808,8 @@ msgid "Don&#8217;t forget to click &#8220;Save Changes&#8221; when you&#8217;re 
 msgstr "完成后请不要忘记点击“保存更改”按钮！"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:40 wp-admin/about.php:59 wp-admin/about.php:531
+#: wp-admin/about.php:40 wp-admin/about.php:60 wp-admin/about.php:80
+#: wp-admin/about.php:100 wp-admin/about.php:120 wp-admin/about.php:139
+#: wp-admin/about.php:611
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>%s版本</strong>修正了一些安全问题。"

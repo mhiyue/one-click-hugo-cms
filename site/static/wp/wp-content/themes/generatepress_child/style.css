@@ -3,3 +3,4 @@
 .posted-on .entry-date:before{content:'Published: ';}
 .minibook{float:right;}
 .booklayer{padding:8px;width:100%;display:block;border:solid 1px #CCC;margin:3px;border-radius:5px;background:#EEE;color:#333;vertical-align:top;}
+table{ border-collapse: collapse; border-spacing: 0; table-layout: fixed;}

@@ -5,7 +5,7 @@ Tags: generatepress
 Requires at least: 4.5
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.12.1
+Stable tag: 1.12.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,16 @@ To learn how to install GP Premium, check out our documentation [here](https://d
 In most cases, #1 will work fine and is way easier.
 
 == Changelog ==
+
+= 1.12.2 =
+* Blog: Load columns CSS when using filter to enable it anywhere
+* Menu Plus: Fix sticky mobile header jump when using inline mobile toggle
+* Menu Plus: Add margin to sticky nav branding when set to full width
+* Menu Plus: Disable sticky nav container text align padding
+* Menu Plus: Make mobile menu absolute only when smooth scroll is enabled
+* Menu Plus: Improve nav as header/mobile header when using flexbox
+* Menu Plus: Prevent off-canvas panel close button from flashing visible when closing
+* Spacing: Fix custom nav search height
 
 = 1.12.1 =
 * Typography: Fix missing heading font size controls in the Customizer

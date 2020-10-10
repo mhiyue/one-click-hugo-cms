@@ -127,6 +127,11 @@
 	color: #fff;
 	font-size: 30px;
 	border: 0;
+	opacity: 0;
+}
+
+.slide-opened .slideout-overlay button.slideout-exit {
+	opacity: 1;
 }
 
 button.slideout-exit:hover {

@@ -142,7 +142,7 @@ jQuery(document).ready(function($) {
 			if(controller.is('select')) {
 				var className = this.className.match(/perfmatters-select-control-([^\s]*)/);
 
-				if(className && className[1] == controller.val()) {
+				if(className && ((className[1] == controller.val()) != $(this).hasClass('perfmatters-control-reverse'))) {
 					forceShow = true;
 				}
 				else {

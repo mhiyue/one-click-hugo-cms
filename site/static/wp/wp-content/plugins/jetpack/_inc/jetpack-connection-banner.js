@@ -5,7 +5,7 @@
 		contentContainer = $( '.jp-wpcom-connect__content-container' ),
 		nextFeatureButtons = $( '.jp-banner__button-container .next-feature' ),
 		fullScreenContainer = $( '.jp-connect-full__container' ),
-		fullScreenDismiss = $( '.jp-connect-full__dismiss, .jp-connect-full__dismiss-paragraph' ),
+		fullScreenDismiss = $( '.jp-connect-full__dismiss' ),
 		wpWelcomeNotice = $( '#welcome-panel' ),
 		connectionBanner = $( '#message' ),
 		connectionBannerDismiss = $( '.connection-banner-dismiss' );
@@ -36,9 +36,7 @@
 		transitionSlideToIndex( $( this ).index() );
 	} );
 
-	nextFeatureButtons.on( 'click', function( e ) {
-		e.preventDefault();
-
+	nextFeatureButtons.on( 'click', function() {
 		var slideIndex = $( this )
 			.closest( '.jp-wpcom-connect__slide' )
 			.index();
@@ -73,6 +71,9 @@
 	 */
 	fullScreenDismiss.on( 'click', function() {
 		$( fullScreenContainer ).hide();
+
+		// Re-enable scrolling
+		$( 'body' ).css( 'overflow', 'visible' );
 	} );
 
 	$( document ).keyup( function( e ) {
@@ -80,4 +81,9 @@
 			$( fullScreenDismiss ).click();
 		}
 	} );
+
+	// Prevent scrolling if full-page prompt is showing
+	if ( $( fullScreenContainer ).is( ':visible' ) ) {
+		$( 'body' ).css( 'overflow', 'hidden' );
+	}
 } )( jQuery );

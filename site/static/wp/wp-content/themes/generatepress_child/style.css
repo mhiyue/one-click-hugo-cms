@@ -7,3 +7,7 @@ table{ border-collapse: collapse; border-spacing: 0; table-layout: fixed;}
 
 .posted-on { display: block;}
 .cat-links, .tags-links { display: inline-block;}
+
+.single-post span.rt-reading-time { display: inline !important;}
+.single-post .stats_counter:before { content: ' |';}
+.single-post .entry-content p:first-of-type { margin-top: 2rem;}

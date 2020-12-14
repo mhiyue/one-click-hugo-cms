@@ -8,4 +8,4 @@ table{ border-collapse: collapse; border-spacing: 0; table-layout: fixed;}
 .posted-on { display: block;}
 .cat-links, .tags-links { display: inline-block;}
 
-.generate-columns .inside-article { padding: 40px 40px 40px 40px;}
+.generate-columns .inside-article { padding: 50px 50px 50px 50px;}

@@ -157,7 +157,7 @@ jQuery( document ).ready( function( $ ) {
 		} );
 	}
 
-	$( document ).on( 'ready', function() {
+	$( function() {
 		"use strict";
 
 		if ( generateWooCommerce.quantityButtons ) {
@@ -212,7 +212,7 @@ jQuery( document ).ready( function( $ ) {
 						} );
 					}
 
-					$( '.plus, .minus' ).unbind( 'click' );
+					$( '.plus, .minus' ).off( 'click' );
 
 					$( '.plus, .minus' ).on( 'click', function() {
 						// Quantity

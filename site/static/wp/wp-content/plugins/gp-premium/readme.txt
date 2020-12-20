@@ -3,9 +3,9 @@ Contributors: edge22
 Donate link: https://generatepress.com
 Tags: generatepress
 Requires at least: 4.5
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 1.12.2
+Stable tag: 1.12.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,9 @@ To learn how to install GP Premium, check out our documentation [here](https://d
 In most cases, #1 will work fine and is way easier.
 
 == Changelog ==
+
+= 1.12.3 =
+* WooCommerce: Fix quantity buttons in WP 5.6
 
 = 1.12.2 =
 * Blog: Load columns CSS when using filter to enable it anywhere

@@ -136,7 +136,7 @@
 	}
 	.generate-columns.mobile-grid-100,
 	.grid-sizer.mobile-grid-100 {
-		width: 100%;
+		width: 50%;
 	}
 	.generate-columns-container > .paging-navigation {
 		margin-left: 0;

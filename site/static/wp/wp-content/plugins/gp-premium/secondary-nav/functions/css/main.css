@@ -235,6 +235,10 @@
 	justify-content: center;
 }
 
+.secondary-nav-aligned-center .secondary-navigation .main-nav > ul {
+	justify-content: center;
+}
+
 .secondary-nav-aligned-left.rtl .secondary-navigation .inside-navigation {
 	justify-content: flex-end;
 }

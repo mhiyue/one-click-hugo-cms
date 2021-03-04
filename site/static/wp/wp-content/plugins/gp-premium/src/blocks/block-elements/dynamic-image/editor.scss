@@ -1,0 +1,40 @@
+.wp-block[data-type="generatepress/dynamic-image"] {
+    margin-top: 0;
+	margin-bottom: 0;
+	color: #fff;
+
+	.components-gpp-dynamic-image-placeholder__label {
+		color: white;
+		position: absolute;
+		font-size: 1em;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& > .gpp-dynamic-featured-image__label {
+			margin-left: 10px;
+		}
+	}
+
+	.gpp-dynamic-image-placeholder {
+		background: #000;
+		vertical-align: middle;
+	}
+
+	.components-placeholder {
+		width: 100%;
+	}
+
+	.gpp-dynamic-image-preview {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dynamic-author-image-rounded {
+		border-radius: 100%;
+	}
+}

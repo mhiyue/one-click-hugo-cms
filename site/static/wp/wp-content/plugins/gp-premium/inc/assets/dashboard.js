@@ -34,4 +34,12 @@ jQuery( document ).ready(function( $ ) {
 			return false;
 		}
 	} );
+
+	$( 'input[name="generate_package_sections_deactivate_package"]' ).on( 'click', function() {
+		var check = confirm( dashboard.deprecated_module );
+
+		if ( ! check ) {
+			return false;
+		}
+	} );
 });

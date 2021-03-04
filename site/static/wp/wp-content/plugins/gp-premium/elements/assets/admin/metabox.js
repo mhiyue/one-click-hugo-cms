@@ -69,9 +69,11 @@ jQuery(document).ready(function( $ ) {
 
 		if ( $( '.element-settings' ).hasClass( 'header' ) ) {
 			if ( 'hero' !== tab ) {
-				$( '#generate-element-content' ).next( '.CodeMirror' ).hide();
+				$( '#generate-element-content' ).next( '.CodeMirror' ).removeClass( 'gpp-elements-show-codemirror' );
+				$( '#generate_page_hero_template_tags' ).css( 'display', '' );
 			} else {
-				$( '#generate-element-content' ).next( '.CodeMirror' ).show();
+				$( '#generate-element-content' ).next( '.CodeMirror' ).addClass( 'gpp-elements-show-codemirror' );
+				$( '#generate_page_hero_template_tags' ).css( 'display', 'block' );
 			}
 		}
 	} );

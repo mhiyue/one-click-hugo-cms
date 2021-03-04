@@ -8,7 +8,8 @@
     padding: 10px 15px;
     cursor: pointer;
     color: #222;
-    display: inline-block;
+	display: inline-block;
+	text-decoration: none;
 }
 
 .generatepress-dashboard-tabs a:not(:last-child) {

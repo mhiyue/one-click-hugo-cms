@@ -1,0 +1,23 @@
+.gpp-dynamic-headline-text-dropdown .components-popover__content {
+	width: 275px;
+
+	.components-base-control:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.components-base-control:last-child .components-base-control__field {
+		margin-bottom: 0;
+	}
+
+	.components-base-control:last-child .components-base-control__help {
+		margin-top: 3px;
+	}
+}
+
+.gpp-blocks-dynamic-text-replace-field {
+    display: none;
+}
+
+.gpp-block-dynamic-year .components-base-control__help {
+	margin-top: 2px;
+}

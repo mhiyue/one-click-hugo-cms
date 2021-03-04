@@ -27,6 +27,45 @@ In most cases, #1 will work fine and is way easier.
 
 == Changelog ==
 
+= 2.0.0 =
+* Blog: Rewrite infinite scroll using vanilla javascript
+* Blog: Rewrite masonry using vanilla javascript
+* Blog: Add separate infinite scroll path element to footer
+* Blog: Fix missing single/page featured image options when archive image disabled
+* Blog: Add aria-label instead of screen-reader-text to read more button
+* Elements: New Content Template Element
+* Elements: New Post Meta Template Element
+* Elements: New Post Navigation Template Element
+* Elements: New Page Hero Block Element
+* Elements: New Archive Navigation Template Element
+* Elements: New Editor Width option in Block Elements
+* Elements: Move Block Elements options into editor sidebar
+* Elements: Show Site Header options by default in Header Element
+* Elements: Fix Classic Editor issue in Block Elements
+* Elements: Add a list of active Elements to page editor
+* Elements: Add a list of active Elements to the admin bar
+* Elements: Add notices to Customizer if Elements may be overwriting options
+* Elements: Disable mobile header menu if menu is disabled via Layout Element
+* Menu Plus: Hide slideout toggle at set mobile menu breakpoint value
+* Menu Plus: Fix sticky menu height when using navigation as header
+* Secondary Nav: Fix centered secondary navigation items using flexbox
+* Secondary Nav: Fix conflict with Nav as Header option
+* Secondary Nav: Fix missing menu cart items when using click dropdowns
+* Sections: Officially deprecate module
+* Site Library: Completely rebuild Site Library using React
+* WooCommerce: Move full width single product CSS to inline CSS
+* WooCommerce: Use wc_get_product() instead of new WC_Product()
+* WooCommerce: Add more checks for WC() class to prevent error logs
+* WooCommerce: Add generate_wc_cart_panel_checkout_button_output filter
+* WooCommerce: Add generate_wc_sticky_add_to_cart_action filter
+* WooCommerce: Add generate_wc_show_sticky_add_to_cart filter
+* General: Update theme install link
+* General: Update alpha color picker script
+* General: Use correct URL scheme in external stylesheet URLs
+* General: Check if FS_CHMOD_FILE is defined in external stylesheet generation
+* General: Use inline CSS when using AMP plugin
+* General: Update EDD_SL_Plugin_Updater class to 1.8.0
+
 = 1.12.3 =
 * WooCommerce: Fix quantity buttons in WP 5.6
 

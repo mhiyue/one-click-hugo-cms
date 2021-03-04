@@ -253,7 +253,7 @@ wp.customize( 'generate_spacing_settings[sticky_menu_item_height]', function( va
 			newval = wp.customize('generate_spacing_settings[menu_item_height]').get();
 		}
 
-		jQuery( 'head' ).append( '<style id="sticky_menu_item_height" media="' + gp_spacing.tablet + ',' + gp_spacing.desktop + '">.main-navigation.sticky-navigation-transition .main-nav > ul > li > a,.sticky-navigation-transition .menu-toggle,.main-navigation.sticky-navigation-transition .mobile-bar-items a, .main-navigation.sticky-navigation-transition .navigation-branding .main-title{line-height:' + newval + 'px;}</style>' );
+		jQuery( 'head' ).append( '<style id="sticky_menu_item_height" media="' + gp_spacing.tablet + ',' + gp_spacing.desktop + '">.main-navigation.sticky-navigation-transition .main-nav > ul > li > a,.sticky-navigation-transition .menu-toggle,.main-navigation.sticky-navigation-transition .mobile-bar-items a, .main-navigation.sticky-navigation-transition .menu-bar-item > a, .main-navigation.sticky-navigation-transition .navigation-branding .main-title{line-height:' + newval + 'px;}</style>' );
 		jQuery( 'head' ).append( '<style id="sticky_menu_item_logo_height" media="' + gp_spacing.tablet + ',' + gp_spacing.desktop + '">.main-navigation.sticky-navigation-transition .navigation-logo.site-logo img, .main-navigation.sticky-navigation-transition .navigation-branding img{height:' + newval + 'px;}</style>' );
 		jQuery( 'head' ).append( '<style id="sticky_menu_item_height_transition">.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a,.main-navigation .navigation-logo img,.main-navigation .navigation-branding img{transition:0s;}</style>' );
 		setTimeout(function() {
@@ -269,7 +269,7 @@ wp.customize( 'generate_spacing_settings[sticky_menu_item_height]', function( va
 wp.customize( 'generate_spacing_settings[menu_item_height]', function( value ) {
 	value.bind( function( newval ) {
 
-		jQuery( 'head' ).append( '<style id="menu_item_height_transition">.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a,.main-navigation .navigation-logo img, .main-navigation .navigation-branding > *{transition:0s;}</style>' );
+		jQuery( 'head' ).append( '<style id="menu_item_height_transition">.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a,.main-navigation.sticky-navigation-transition .menu-bar-item > a,.main-navigation .navigation-logo img, .main-navigation .navigation-branding > *{transition:0s;}</style>' );
 		setTimeout(function() {
 			jQuery( 'style#menu_item_height_transition' ).remove();
 		}, 200 );
@@ -280,7 +280,7 @@ wp.customize( 'generate_spacing_settings[menu_item_height]', function( value ) {
 wp.customize( 'generate_spacing_settings[off_canvas_menu_item_height]', function( value ) {
 	value.bind( function( newval ) {
 
-		jQuery( 'head' ).append( '<style id="off_canvas_menu_item_height_transition">.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a,.main-navigation .navigation-logo img, .main-navigation .navigation-branding > *{transition:0s;}</style>' );
+		jQuery( 'head' ).append( '<style id="off_canvas_menu_item_height_transition">.main-navigation .main-nav ul li a,.menu-toggle,.main-navigation .mobile-bar-items a,.main-navigation.sticky-navigation-transition .menu-bar-item > a,.main-navigation .navigation-logo img, .main-navigation .navigation-branding > *{transition:0s;}</style>' );
 		setTimeout(function() {
 			jQuery( 'style#off_canvas_menu_item_height_transition' ).remove();
 		}, 200 );

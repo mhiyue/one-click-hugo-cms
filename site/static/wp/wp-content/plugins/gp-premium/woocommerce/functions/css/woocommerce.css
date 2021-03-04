@@ -260,6 +260,10 @@
 	visibility: visible;
 }
 
+.dropdown-click ul li.wc-menu-item:hover ul {
+	display: block;
+}
+
 .sidebar .wc-mini-cart {
 	right: 100%;
 	top: 0;

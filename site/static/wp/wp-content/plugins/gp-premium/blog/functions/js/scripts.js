@@ -1,33 +1,39 @@
-jQuery( document ).ready( function( $ ) {
-	var $masonry_container = $( '.masonry-container' );
-	var msnry = false;
+document.addEventListener( 'DOMContentLoaded', function() {
+	var msnryContainer = document.querySelector( '.masonry-container' );
 
-	if ( $masonry_container.length ) {
-		var $grid = $masonry_container.masonry( generateBlog.masonryInit );
+	if ( msnryContainer ) {
+		var msnry = new Masonry( msnryContainer, generateBlog.masonryInit ),
+			navBelow = document.querySelector( '#nav-below' ),
+			loadMore = document.querySelector( '.load-more' );
 
-		msnry = $grid.data( 'masonry' );
+		imagesLoaded( msnryContainer, function() {
+			msnry.layout();
+			msnryContainer.classList.remove( 'are-images-unloaded' );
 
-		$grid.imagesLoaded( function() {
-			$grid.masonry( 'layout' );
-			$grid.removeClass( 'are-images-unloaded' );
-			$( '.load-more' ).removeClass( 'are-images-unloaded' );
-			$( '#nav-below' ).css( 'opacity', '1' );
-			$grid.masonry( 'option', { itemSelector: '.masonry-post' });
-			var $items = $grid.find( '.masonry-post' );
-			$grid.masonry( 'appended', $items );
+			if ( loadMore ) {
+				loadMore.classList.remove( 'are-images-unloaded' );
+			}
+
+			if ( navBelow ) {
+				navBelow.style.opacity = 1;
+			}
 		} );
 
-		$( '#nav-below' ).insertAfter( '.masonry-container' );
+		msnryContainer.parentNode.insertBefore( navBelow, msnryContainer.nextSibling );
 
-		$( window ).on( "orientationchange", function( event ) {
-			$grid.masonry( 'layout' );
+		window.addEventListener( 'orientationchange', function() {
+			msnry.layout();
 		} );
 	}
 
-	if ( $( '.infinite-scroll' ).length && $( '.nav-links .next' ).length ) {
-		var $container = $( '#main article' ).first().parent();
-		var $button = $( '.load-more a' );
-		var svgIcon = '';
+	var infiniteScroll = document.querySelector( '.infinite-scroll' ),
+		nextLink = document.querySelector( '.nav-links .next' );
+
+	if ( infiniteScroll && nextLink ) {
+		var infiniteItems = document.querySelectorAll( '.infinite-scroll-item' ),
+			container = infiniteItems[0].parentNode,
+			button = document.querySelector( '.load-more a' );
+			svgIcon = '';
 
 		if ( generateBlog.icon ) {
 			svgIcon = generateBlog.icon;
@@ -37,37 +43,52 @@ jQuery( document ).ready( function( $ ) {
 
 		infiniteScrollInit.outlayer = msnry;
 
-		$container.infiniteScroll( infiniteScrollInit );
+		var infiniteScroll = new InfiniteScroll( container, infiniteScrollInit );
 
-		$button.on( 'click', function( e ) {
-			document.activeElement.blur();
-			$( this ).html( svgIcon + generateBlog.loading ).addClass( 'loading' );
-		} );
+		if ( button ) {
+			button.addEventListener( 'click', function( e ) {
+				document.activeElement.blur();
+				e.target.innerHTML = svgIcon + generateBlog.loading;
+				e.target.classList.add( 'loading' );
+			} );
+		}
 
-		$container.on( 'append.infiniteScroll', function( event, response, path, items ) {
-			if ( ! $( '.generate-columns-container' ).length ) {
-				$container.append( $button.parent() );
+		infiniteScroll.on( 'append', function( response, path, items ) {
+			if ( button && ! document.querySelector( '.generate-columns-container' ) ) {
+				container.appendChild( button.parentNode );
 			}
 
-			// Fix srcset images not loading in Safari.
-			// img.outerHTML = img.outerHTML isn't minified properly, so we need the extra var.
-			$( items ).find( 'img' ).each( function( index, img ) {
-				var imgOuterHTML = img.outerHTML;
-				img.outerHTML = imgOuterHTML;
+			items.forEach( function( element ) {
+				var images = element.querySelectorAll( 'img' );
+
+				if ( images ) {
+					images.forEach( function( image ) {
+						var imgOuterHTML = image.outerHTML;
+						image.outerHTML = imgOuterHTML;
+					} );
+				}
 			} );
 
-			if ( $grid ) {
-				$grid.imagesLoaded( function() {
-					$grid.masonry( 'layout' );
+			if ( msnryContainer && msnry ) {
+				imagesLoaded( msnryContainer, function() {
+					msnry.layout();
 				} );
 			}
 
-			$button.html( svgIcon + generateBlog.more ).removeClass( 'loading' );
-			$( document.body ).trigger( 'post-load' );
+			if ( button ) {
+				button.innerHTML = svgIcon + generateBlog.more;
+				button.classList.remove( 'loading' );
+			}
+
+			document.body.dispatchEvent( new Event( 'post-load' ) );
 		} );
 
-		$container.on( 'last.infiniteScroll', function() {
-			$( '.load-more' ).hide();
+		infiniteScroll.on( 'last', function() {
+			var loadMore = document.querySelector( '.load-more' );
+
+			if ( loadMore ) {
+				loadMore.style.display = 'none';
+			}
 		} );
 	}
 } );

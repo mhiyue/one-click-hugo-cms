@@ -112,13 +112,6 @@
 	display: none;
 }
 
-.woocommerce #content div.product div.images,
-.woocommerce div.product div.images,
-.woocommerce-page #content div.product div.images,
-.woocommerce-page div.product div.images {
-	width: 100%;
-}
-
 .do-quantity-buttons div.quantity {
 	justify-content: flex-end;
 }
